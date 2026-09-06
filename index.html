@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chaithanya Virupaksha — Cloud-native engineering &amp; security risk</title>
+
+<meta name="description" content="Chaithanya Virupaksha. MSc Advanced Computer Science, Newcastle University. Cloud-native systems on Azure and Kubernetes, secure software development, and technology consulting. Open to UK graduate roles, available immediately.">
+<meta name="author" content="Chaithanya Virupaksha">
+<meta name="theme-color" content="#DDE1DE">
+
+
+<link rel="canonical" href="https://chai6699.github.io/">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Chaithanya Virupaksha — Cloud-native engineering &amp; security risk">
+<meta property="og:description" content="MSc Advanced Computer Science, Newcastle University. Azure, Kubernetes, secure software development, technology consulting. Open to UK graduate roles, available immediately.">
+<meta property="og:url" content="https://chai6699.github.io/">
+<meta property="og:image" content="https://chai6699.github.io/profile.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%231B4D3E'/%3E%3Ctext x='50%25' y='55%25' font-family='Georgia,serif' font-size='30' font-weight='700' fill='%23F7F8F7' text-anchor='middle' dominant-baseline='middle'%3ECV%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&family=IBM+Plex+Mono:wght@400;500;600&family=Literata:opsz,wght@7..72,400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="wrap topbar-in">
+    <a class="mark" href="#top">Chaithanya&nbsp;Virupaksha</a>
+    <nav class="topnav" aria-label="Sections">
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#capabilities">Capabilities</a>
+      <a href="#research">Research</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-solid" href="Chaithanya_Virupaksha_CV.pdf" download>Download CV</a>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ══════════ HERO ══════════ -->
+<section id="top" class="hero">
+  <div class="wrap hero-in">
+    <p class="eyebrow load" style="--d:0">Software engineering · Cloud &amp; Kubernetes · Security risk</p>
+
+    <h1 class="load" style="--d:1">Chaithanya<br>Virupaksha</h1>
+
+    <div class="hero-cols">
+      <div class="load" style="--d:2">
+        <p class="thesis">
+          Most systems work in a demo. I build the parts that decide whether they survive
+          contact with production — the authentication that holds, the release that doesn't
+          drop traffic, the risk somebody named before it bit.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-solid" href="#work">See the work</a>
+          <a class="btn" href="mailto:chaithanya6699@gmail.com">Email me</a>
+        </div>
+      </div>
+
+    <dl class="status load" style="--d:3">
+      <div><dt>Status</dt><dd><span class="pulse" aria-hidden="true"></span>Open to graduate roles</dd></div>
+      <div><dt>Available</dt><dd>Immediately</dd></div>
+      <div><dt>Based</dt><dd>Newcastle upon Tyne, UK</dd></div>
+      <div><dt>Right to work</dt><dd>UK Graduate Route, 2 years</dd></div>
+      <div><dt>Looking for</dt><dd>Software engineering · Technology consulting · Cyber risk</dd></div>
+    </dl>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ WORK ══════════ -->
+<section id="work" class="band">
+  <div class="wrap">
+    <div class="band-head">
+      <p class="rubric">Selected work</p>
+      <p class="band-note">Four projects, chosen because each one forced a decision rather than a feature.</p>
+    </div>
+
+    <article class="proj">
+      <header class="proj-head">
+        <h2>Federated Learning under Wireless Packet Loss</h2>
+      </header>
+      <div class="proj-grid">
+        <div class="proj-main">
+<p>
+        My MSc dissertation. Machine learning across many devices normally assumes that whatever a
+        device sends, the server receives. Real devices upload over slow Wi-Fi, lose packets and miss
+        deadlines. I built a simulator instrumented per device per round, modelling three separate
+        network failure modes across compression schemes, four client-selection policies and two data
+        distributions.
+      </p>
+      <p>
+        The result was that compression does not only reduce bandwidth cost. It changes which devices
+        can take part at all. The accuracy gap between four selection strategies collapsed from 16.4
+        points to 2.3 once updates were small enough to arrive within the deadline.
+      </p>
+      <dl class="note">
+        <div><dt>Hard part</dt><dd>Telling a communication failure apart from a learning failure. If you only log accuracy, a configuration can look better simply because it excluded the devices hardest to hear from.</dd></div>
+        <div><dt>What I did</dt><dd>Instrumented every device every round and made each random draw a pure function of its inputs, so two configurations differing only in algorithm saw identical network conditions and their difference contained no channel noise.</dd></div>
+        <div><dt>What it cost me</dt><dd>Two defects surfaced in my own audit: a channel model where two arms differed in more than the variable under test, and an estimator receiving data it should never have seen. Both weakened my results. Both are in the repository changelog rather than quietly corrected.</dd></div>
+      </dl>
+          <p class="links"><a data-link="diss_code" class="lnk">Source code and changelog</a></p>
+        </div>
+        <aside class="proj-rail">
+          <p class="proj-meta">Newcastle University · 2026 · Supervisor: Dr Rehmat Ullah</p>
+          <ul class="stack"><li>Python</li><li>PyTorch</li><li>NumPy</li><li>50 unit tests</li></ul>
+        </aside>
+      </div>
+    </article>
+
+    <article class="proj">
+      <header class="proj-head">
+        <h2>Cloud-Native Bookstore Platform</h2>
+        
+      </header>
+      <div class="proj-grid">
+        <div class="proj-main">
+<p>
+        A team project, six of us. The platform was a React front end against Catalog, Cart and
+        Gateway services on Azure Kubernetes Service. My part was the client side: I built the
+        catalogue, book detail, cart and checkout pages, and the browser-side authentication through
+        Keycloak — parsing JWT claims into application state, refreshing tokens silently before they
+        expired, and gating routes and admin actions on the user's role.
+      </p>
+      <p>
+        The wider platform, built by the team, covered blue-green releases, autoscaling and
+        Velero-backed recovery. I co-authored the technical report documenting the architecture.
+      </p>
+      <dl class="note">
+        <div><dt>Hard part</dt><dd>Every cart action waited on a round trip, so adding an item felt sluggish even though nothing was wrong.</dd></div>
+        <div><dt>What I did</dt><dd>Applied quantity and removal changes to local state before the API responded, re-fetching on failure to recover consistency. That accepts a brief risk of the screen disagreeing with the server in exchange for an interface that feels immediate — on a cart, the right side of the trade.</dd></div>
+      </dl>
+          <p class="links"><a data-link="proj1_code" class="lnk">Source code</a><a data-link="proj1_writeup" class="lnk">Architecture write-up</a></p>
+        </div>
+        <aside class="proj-rail">
+          <p class="proj-meta">Newcastle University · 2025–26 · Team of six</p>
+          <ul class="stack"><li>React 19</li><li>Vite</li><li>Keycloak</li><li>Spring Boot 3</li><li>AKS</li><li>GitHub Actions</li></ul>
+        </aside>
+      </div>
+    </article>
+
+    <article class="proj">
+      <header class="proj-head">
+        <h2>AI Bias Audit Framework</h2>
+        
+      </header>
+      <div class="proj-grid">
+        <div class="proj-main">
+<p>
+        A framework that measures gender, cultural and role-stereotype bias in generative-AI output
+        rather than asserting it. Responses from several models are compared using TF-IDF, LDA topic
+        modelling and Shannon-entropy diversity scores, so the claim "this model is narrower" comes
+        with a number attached.
+      </p>
+      <dl class="note">
+        <div><dt>Hard part</dt><dd>Bias claims about LLMs are usually anecdotal, which makes them impossible to compare across models or to re-run later.</dd></div>
+        <div><dt>What I did</dt><dd>Fixed the prompt set and the metrics first, so a second run is a measurement rather than a new opinion.</dd></div>
+      </dl>
+          <p class="links"><a data-link="proj2_code" class="lnk">Source code</a></p>
+        </div>
+        <aside class="proj-rail">
+          <p class="proj-meta">Newcastle University · 2025–26 · Python, scikit-learn, NLP</p>
+          <ul class="stack"><li>Python</li><li>scikit-learn</li><li>TF-IDF</li><li>LDA</li><li>Shannon entropy</li></ul>
+        </aside>
+      </div>
+    </article>
+
+    <article class="proj">
+      <header class="proj-head">
+        <h2>Tokeneer Security Risk Assessment</h2>
+        
+      </header>
+      <div class="proj-grid">
+        <div class="proj-main">
+<p>
+        A structured risk assessment of the Tokeneer secure-enclave system, mapping business risk to
+        concrete technical threats — biometric spoofing, privilege escalation, enrolment-station
+        compromise — and then to prioritised mitigations with the residual risk stated rather than
+        assumed away.
+      </p>
+      <dl class="note">
+        <div><dt>Hard part</dt><dd>A threat list is easy; a defensible ordering of what to fix first, with a budget in mind, is not.</dd></div>
+        <div><dt>What I did</dt><dd>Scored each threat against NIST impact and likelihood criteria so the ranking could be argued with, not just presented.</dd></div>
+      </dl>
+          <p class="links"><a data-link="proj3_report" class="lnk">Read the assessment</a></p>
+        </div>
+        <aside class="proj-rail">
+          <p class="proj-meta">Newcastle University · 2025–26 · NIST frameworks, threat modelling</p>
+          <ul class="stack"><li>NIST 800-30</li><li>Threat modelling</li><li>Secure SDLC</li></ul>
+        </aside>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ══════════ EXPERIENCE ══════════ -->
+<section id="experience" class="band band-alt">
+  <div class="wrap">
+    <div class="band-head">
+      <p class="rubric">Experience</p>
+      <p class="band-note">Client-facing consulting, product front-end, and applied machine learning.</p>
+    </div>
+
+    <ol class="roles">
+      <li>
+        <p class="role-when">May 2024 — Aug 2025</p>
+        <div class="role-body">
+          <h3>Technology Consulting Analyst</h3>
+          <p class="role-org">Accurate InfoTech Solutions · Bengaluru</p>
+          <ul>
+            <li>Advised academic and enterprise clients on system architecture, process optimisation and digital-transformation roadmaps, turning requirements sessions into written recommendations.</li>
+            <li>Ran technical assessments and gap analyses, prioritising the risks found by business impact and presenting remediation options that client teams adopted.</li>
+            <li>Coordinated MOU partnerships with engineering colleges, scoping technical delivery and student mentoring programmes.</li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <p class="role-when">Sept 2023 — Mar 2024</p>
+        <div class="role-body">
+          <h3>Full-Stack Development Intern</h3>
+          <p class="role-org">PACE Wisdom · Bengaluru</p>
+          <ul>
+            <li>Rebuilt front-end components in SCSS, HTML and Bootstrap on a component-based architecture, raising the Lighthouse performance score by around 25%.</li>
+            <li>Shipped responsive features in two-week agile cycles alongside design and back-end engineers.</li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <p class="role-when">Dec 2022 — Jan 2023</p>
+        <div class="role-body">
+          <h3>Machine Learning Intern</h3>
+          <p class="role-org">Accurate InfoTech Solutions · Bengaluru</p>
+          <ul>
+            <li>Built a Python and OpenCV object-detection pipeline across multiple object categories, reaching 98% classification accuracy on a held-out test set.</li>
+            <li>Prototyped a CNN for plant-disease identification from leaf images that outperformed the rule-based baseline it replaced.</li>
+          </ul>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ══════════ CAPABILITIES ══════════ -->
+<section id="capabilities" class="band">
+  <div class="wrap">
+    <div class="band-head">
+      <p class="rubric">Capabilities</p>
+      <p class="band-note">Grouped by what I would be asked to do, not by logo count.</p>
+    </div>
+
+    <div class="caps">
+      <div class="cap">
+        <h3>Build and ship services</h3>
+        <p>Java 21, Spring Boot 3, Quarkus, REST and OpenAPI, JPA/Hibernate, PostgreSQL, MySQL. Python and Flask for tooling; React, SCSS and Bootstrap on the front end.</p>
+      </div>
+      <div class="cap">
+        <h3>Run them on cloud infrastructure</h3>
+        <p>Azure Kubernetes Service, Kubernetes, Docker, NGINX Ingress, GitHub Actions CI/CD, Velero for backup and restore, Prometheus and Grafana for observability, AWS S3.</p>
+      </div>
+      <div class="cap">
+        <h3>Secure them and price the risk</h3>
+        <p>NIST risk frameworks, threat modelling, secure SDLC practice, OAuth2 and JWT, Keycloak, role-based access control.</p>
+      </div>
+      <div class="cap">
+        <h3>Apply and evaluate ML</h3>
+        <p>scikit-learn, OpenCV, convolutional networks, NLP with TF-IDF and LDA, pandas, and structured evaluation of generative-AI output.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ RESEARCH & EDUCATION ══════════ -->
+<section id="research" class="band band-alt">
+  <div class="wrap">
+    <div class="band-head">
+      <p class="rubric">Education &amp; research</p>
+    </div>
+
+    <div class="split">
+      <figure class="portrait">
+        <img src="profile.jpg" alt="Chaithanya Virupaksha" width="900" height="1125" loading="lazy" decoding="async">
+        <figcaption>Newcastle upon Tyne</figcaption>
+      </figure>
+
+      <div class="split-body">
+        <div class="entry">
+          <h3>MSc Advanced Computer Science</h3>
+          <p class="entry-meta">Newcastle University, UK · 2025–2026 · submitted, awaiting results</p>
+          <p>Cloud Computing · Secure Software Development · Risk &amp; Trust Management · Generative AI for Businesses · Enterprise Software &amp; Services · Advanced Programming in Java</p>
+        </div>
+        <div class="entry">
+          <h3>BEng Computer Science</h3>
+          <p class="entry-meta">Dr. Ambedkar Institute of Technology, Bengaluru · Graduated July 2024 · CGPA 8.3/10</p>
+        </div>
+        <div class="entry">
+          <h3>Published papers</h3>
+          <p>Virupaksha, C. (2026) <em>Privacy-Preserving Digital Twin Models for Smart Healthcare Applications.</em> IJDTSC 2(1). <a data-link="pub1" class="lnk inline">Read</a></p>
+          <p>Siddaraju, Dr. &amp; Virupaksha, C. et al. (2024) <em>Smart Irrigation Using Embedded AI.</em> IJIRCCE 12(6). <a data-link="pub2" class="lnk inline">Read</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CONTACT ══════════ -->
+<section id="contact" class="band contact">
+  <div class="wrap">
+    <p class="rubric">Contact</p>
+    <h2 class="contact-line">Open to graduate roles from December 2026 in software engineering, technology consulting and cyber risk.</h2>
+    <p class="contact-sub">Based in Newcastle upon Tyne, happy to travel for client work. Email reaches me fastest — I reply within a day.</p>
+    <div class="contact-actions">
+      <a class="btn btn-solid" href="mailto:chaithanya6699@gmail.com">chaithanya6699@gmail.com</a>
+      <a class="btn" href="tel:+447799042262">+44 7799 042262</a>
+      <a class="btn" data-link="linkedin">LinkedIn</a>
+      <a class="btn" data-link="github">GitHub</a>
+      <a class="btn" href="Chaithanya_Virupaksha_CV.pdf" download>CV (PDF)</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <p>© <span id="yr"></span> Chaithanya Virupaksha</p>
+    <p>Newcastle upon Tyne · Written and maintained by hand</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
