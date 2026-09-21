@@ -6,7 +6,7 @@
    ============================================================ */
 
 const LINKS = {
-  linkedin:      'https://www.linkedin.com/in/chaithanya-virupaksha',
+  linkedin:      'https://www.linkedin.com/in/chaithanya-virupaksha-6b1675295/',
   github:        'https://github.com/chai6699',
 
   diss_code:     'https://github.com/chai6699/federated-learning-packet-loss',
@@ -15,7 +15,7 @@ const LINKS = {
   proj2_code:    '',   // AI bias audit repository
   proj3_report:  '',   // Tokeneer assessment (PDF in this folder is fine, e.g. 'tokeneer.pdf')
 
-  pub1:          '',   // Digital twin paper
+  pub1:          'https://egnitronscientificpress.com/index.php/IJDTSC/article/view/34',   // Digital twin paper
   pub2:          ''    // Smart irrigation paper
 };
 
