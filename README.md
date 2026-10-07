@@ -1,74 +1,42 @@
-# Portfolio — setup and deployment
+## Chaithanya Virupaksha
 
-Four files matter: `index.html`, `styles.css`, `script.js`, `Chaithanya_Virupaksha_CV.pdf`, plus `profile.jpg`.
+MSc Advanced Computer Science at Newcastle University (award December 2026).
+Previously 15 months full-time in Bengaluru delivering machine-learning projects for
+clients, from requirements to handover, after part-time ML and full-stack internships.
 
----
+I build ML systems and the software around them, and I care about whether they actually
+work under conditions the happy path doesn't cover.
 
-## 1. Fill in your links (5 minutes, do this first)
+**Currently**
+- Looking for machine learning, applied AI and forward deployed engineering roles in the UK
+- UK Graduate Route from December 2026, so no sponsorship needed to start
+- Working towards AWS Solutions Architect Associate
 
-Open **`script.js`**. The first block is the only place links live:
+**Working with**
+Python · PyTorch · scikit-learn · Pandas · SQL · Java · Spring Boot · React · Docker ·
+Kubernetes · GitHub Actions · PostgreSQL
 
-```js
-const LINKS = {
-  linkedin:      'https://www.linkedin.com/in/your-handle',
-  github:        'https://github.com/your-handle',
-  proj1_code:    'https://github.com/your-handle/bookstore-platform',
-  ...
-};
-```
+**Selected work**
+- [federated-learning-packet-loss](https://github.com/chai6699/federated-learning-packet-loss) —
+  MSc dissertation. FedAvg simulator showing that gradient compression decides which
+  devices can take part over lossy Wi-Fi: with Top-k, the accuracy spread across four
+  client-selection policies fell from 16.4 to 2.3 points. Three channel models, common
+  random numbers for paired comparisons, 50 unit tests, and a changelog of eight defects
+  found auditing my own results.
 
-Anything left as `''` is **hidden automatically** — the page never shows a dead link.
-So it is safe to publish before every repo is ready, and to fill them in later.
+**Publications**
+- Privacy-Preserving Digital Twin Models for Smart Healthcare Applications, IJDTSC 2(1), 2026
+- Smart Irrigation Using Embedded AI, IJIRCCE 12(6), 2024
 
-Priority order: `github`, `linkedin`, `proj1_code`. Those three carry most of the weight.
+📫 chaithanya6699@gmail.com · [LinkedIn](https://www.linkedin.com/in/chaithanya-virupaksha-6b1675295/) · [Portfolio](https://chai6699.github.io/)
 
----
 
-## 2. Publish it free on GitHub Pages
+## 🌐 Socials:
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/chaithanya-virupaksha-6b1675295/) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:chaithanya6699@gmail.com) [![Portfolio](https://img.shields.io/badge/Portfolio-%23000000.svg?logo=githubpages&logoColor=white)](https://chai6699.github.io/)
 
-You need a free GitHub account. Total time: about ten minutes.
+# 💻 Tech Stack:
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white) ![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white) ![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white) ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white) ![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black) ![OpenCV](https://img.shields.io/badge/opencv-%23white.svg?style=for-the-badge&logo=opencv&logoColor=white)
 
-1. Go to **github.com/new**. Name the repository exactly: `chai6699.github.io`
-2. Set it to **Public**. Do not tick "Add a README". Click **Create repository**.
-3. On the next screen click **uploading an existing file**.
-4. Drag in all five files — `index.html`, `styles.css`, `script.js`, `profile.jpg`,
-   `Chaithanya_Virupaksha_CV.pdf`. Do **not** upload the folder; upload the files themselves,
-   or `index.html` will not sit at the root and the site will 404.
-5. Click **Commit changes**.
-6. Go to **Settings → Pages**. Under "Build and deployment", Source = `Deploy from a branch`,
-   Branch = `main`, folder = `/ (root)`. Save.
-7. Wait a few minutes, then open `https://chai6699.github.io`.
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white) ![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white) ![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white)
 
-**Alternative, no account juggling:** go to **app.netlify.com/drop** and drag the folder in.
-It publishes instantly on a random URL you can rename. Good for testing; GitHub Pages is
-better for a permanent address because the URL itself signals you use version control.
-
----
-
-## 3. After it's live
-
-The canonical and Open Graph URLs are already set to `chai6699.github.io`, so link previews on
-LinkedIn and in email will render correctly.
-
-Put the URL in three places: your LinkedIn headline/contact section, your CV header, and your email signature.
-
----
-
-## 4. A custom domain (optional, ~£10/year)
-
-`chaithanyav.com` or similar from Namecheap or Cloudflare. In GitHub → Settings → Pages,
-enter it under "Custom domain", then add the DNS records GitHub shows you at your registrar.
-HTTPS is automatic once it verifies. Not required — a `.github.io` address is completely
-normal for engineers — but it reads slightly more deliberate on a CV.
-
----
-
-## Editing notes
-
-- Fonts load from Google Fonts, so the page needs a connection to render as designed;
-  it degrades to system fonts gracefully if not.
-- Dark mode follows the visitor's OS setting automatically. There is no toggle by design.
-- Everything is static HTML/CSS/JS. No build step, no dependencies, nothing to break.
-- To change a project, edit the `<article class="proj">` block in `index.html`. Keep the
-  `Hard part` / `What I did` rows — they are the reason the page reads differently from
-  every other graduate portfolio.
+![Azure](https://img.shields.io/badge/azure-%230072C6.svg?style=for-the-badge&logo=microsoftazure&logoColor=white) ![Kubernetes](https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white) ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white) ![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white) ![Grafana](https://img.shields.io/badge/grafana-%23F46800.svg?style=for-the-badge&logo=grafana&logoColor=white) ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)

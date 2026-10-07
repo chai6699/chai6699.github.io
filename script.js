@@ -16,7 +16,7 @@ const LINKS = {
   proj3_report:  '',   // Tokeneer assessment (PDF in this folder is fine, e.g. 'tokeneer.pdf')
 
   pub1:          'https://egnitronscientificpress.com/index.php/IJDTSC/article/view/34',   // Digital twin paper
-  pub2:          ''    // Smart irrigation paper
+  pub2:          'https://ijircce.com/admin/main/storage/app/pdf/1XyNwt4eVbHe94UilAMMsQMiH82gUZjgXSN0gH4J.pdf'    // Smart irrigation paper
 };
 
 /* ============================================================

@@ -1,17 +1,17 @@
 /* ============================================================
    Chaithanya Virupaksha — portfolio
-   Palette: pale sage field, pine signal, burnt ochre alert
+   Palette: pale lilac field, deep purple signal, burnt ochre alert
    Type:    Archivo (expanded) display / Literata body / IBM Plex Mono utility
    ============================================================ */
 
 :root{
-  --field:#DDE1DE;
-  --paper:#F7F8F7;
-  --ink:#12171A;
-  --muted:#5C6866;
-  --rule:#C3CBC6;
-  --pine:#1B4D3E;
-  --pine-soft:#2C6A57;
+  --field:#E6E1EE;
+  --paper:#F9F7FB;
+  --ink:#17121E;
+  --muted:#5F566C;
+  --rule:#CCC3D9;
+  --pine:#4A2577;
+  --pine-soft:#6B3FA6;
   --ochre:#C86A1E;
 
   --display:'Archivo',system-ui,sans-serif;
@@ -24,13 +24,13 @@
 
 @media (prefers-color-scheme:dark){
   :root{
-    --field:#121614;
-    --paper:#1A201D;
-    --ink:#E8EDE9;
-    --muted:#9AA8A2;
-    --rule:#2E3733;
-    --pine:#7FCBAE;
-    --pine-soft:#9BD9C2;
+    --field:#141019;
+    --paper:#1C1723;
+    --ink:#EEE9F4;
+    --muted:#A89EB6;
+    --rule:#352D41;
+    --pine:#C4A5F2;
+    --pine-soft:#D6C0F7;
     --ochre:#E39A55;
   }
 }
@@ -115,8 +115,8 @@ h1,h2,h3{
 .btn-solid:hover{background:var(--ochre);border-color:var(--ochre);color:#fff}
 
 @media (prefers-color-scheme:dark){
-  .btn:hover,.btn-solid{color:#0E1412}
-  .btn-solid:hover{color:#0E1412}
+  .btn:hover,.btn-solid{color:#140F1A}
+  .btn-solid:hover{color:#140F1A}
 }
 
 /* ---------- top bar ---------- */
