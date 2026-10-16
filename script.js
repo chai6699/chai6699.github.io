@@ -49,10 +49,45 @@ const LINKS = {
   if (yr) yr.textContent = new Date().getFullYear();
 
   // Mark the nav item for the section currently in view.
-  var navLinks = Array.prototype.slice.call(document.querySelectorAll('.topnav a'));
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('.dock a'));
   var sections = navLinks
     .map(function (a) { return document.querySelector(a.getAttribute('href')); })
     .filter(Boolean);
+
+  // Scroll reveal.
+  var reveals = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var rv = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); rv.unobserve(e.target); }
+      });
+    }, { rootMargin: '0px 0px -8% 0px' });
+    reveals.forEach(function (el) { rv.observe(el); });
+  } else {
+    reveals.forEach(function (el) { el.classList.add('in'); });
+  }
+
+  // Solid top bar once scrolled past the hero top.
+  var bar = document.querySelector('.topbar');
+  var onScroll = function () { if (bar) bar.classList.toggle('scrolled', window.scrollY > 40); };
+  window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+  // Typing effect for the role line.
+  var typed = document.getElementById('typed');
+  var roles = ['Software Engineer', 'Full-Stack Developer', 'ML Engineer', 'Cloud & DevOps'];
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (typed && !reduce) {
+    var ri = 0, ci = roles[0].length, del = true;
+    setTimeout(function tick() {
+      var word = roles[ri];
+      ci += del ? -1 : 1;
+      typed.textContent = word.slice(0, ci);
+      var wait = del ? 45 : 85;
+      if (del && ci === 0) { del = false; ri = (ri + 1) % roles.length; wait = 300; }
+      else if (!del && ci === roles[ri].length) { del = true; wait = 2200; }
+      setTimeout(tick, wait);
+    }, 2400);
+  }
 
   if (sections.length && 'IntersectionObserver' in window) {
     var spy = new IntersectionObserver(function (entries) {
@@ -66,4 +101,27 @@ const LINKS = {
     }, { rootMargin: '-45% 0px -50% 0px' });
     sections.forEach(function (s) { spy.observe(s); });
   }
+})();
+
+// Project/paper rows: link if a URL is set, otherwise show as plain rows.
+(function () {
+  document.querySelectorAll('[data-link-row]').forEach(function (row) {
+    var url = LINKS[row.dataset.linkRow];
+    if (url) {
+      row.href = url; row.target = '_blank'; row.rel = 'noopener';
+    } else {
+      row.removeAttribute('href');
+      var go = row.querySelector('.go'); if (go) go.remove();
+    }
+  });
+
+  // Contact form opens the visitor's email app.
+  var form = document.getElementById('contact-form');
+  if (form) form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var f = form.elements;
+    var subject = 'Role: ' + f.role.value + ' (from ' + f.name.value + ')';
+    var body = f.message.value + '\n\n' + f.name.value + '\n' + f.email.value;
+    location.href = 'mailto:chaithanya6699@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  });
 })();
