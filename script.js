@@ -1,3 +1,5 @@
+// theme: apply saved choice early
+(function(){ try { var t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {} })();
 /* ============================================================
    EDIT THIS BLOCK — it is the only place links live.
    Paste your real URLs between the quotes.
@@ -190,4 +192,31 @@ const LINKS = {
     if (k === 'hire') setTimeout(function () { location.href = 'mailto:chaithanya6699@gmail.com?subject=Let%27s%20talk'; }, 600);
     if (k === 'cv') { var a = document.createElement('a'); a.href = 'Chaithanya_Virupaksha_CV.pdf'; a.download = ''; a.click(); }
   });
+})();
+
+// ── round 2 ──
+(function () {
+  var root = document.documentElement;
+  var btn = document.getElementById('themebtn');
+  if (btn) btn.addEventListener('click', function () {
+    var t = root.dataset.theme === 'light' ? 'dark' : 'light';
+    root.dataset.theme = t; try { localStorage.setItem('theme', t); } catch (e) {}
+  });
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var glow = document.querySelector('.glow');
+  if (glow && !reduce) window.addEventListener('pointermove', function (e) {
+    glow.style.setProperty('--gx', e.clientX + 'px'); glow.style.setProperty('--gy', e.clientY + 'px');
+  }, { passive: true });
+  var path = document.querySelector('.path');
+  if (path) {
+    var items = path.querySelectorAll('li');
+    var upd = function () {
+      var r = path.getBoundingClientRect(), mid = innerHeight * 0.6;
+      var p = Math.max(0, Math.min(1, (mid - r.top) / r.height));
+      path.style.setProperty('--prog', (p * 100) + '%');
+      items.forEach(function (li) { if (li.getBoundingClientRect().top < mid) li.classList.add('on'); });
+    };
+    if (reduce) items.forEach(function (li) { li.classList.add('on'); });
+    else { addEventListener('scroll', upd, { passive: true }); upd(); }
+  }
 })();
