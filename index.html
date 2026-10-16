@@ -56,11 +56,13 @@
 
     <section id="top" class="hero">
       <h1 class="big"><span>SOFTWARE</span><span class="dim">ENGINEER</span></h1>
+      <p class="rotator">I build software that <span id="rot">holds up in production</span><i class="caret"></i></p>
+      <p class="now"><i></i> Now: finishing my MSc, learning Kafka &amp; AWS, and serving gelato on weekends</p>
       <p class="lead">I build back-end services in Java and Python, front ends in React, and machine-learning systems that hold up outside the notebook. I'm finishing an MSc in Advanced Computer Science at Newcastle University and I'm open to graduate roles across the UK.</p>
       <ul class="stats">
-        <li><b>+3</b><span>YEARS OF<br>EXPERIENCE</span></li>
-        <li><b>+4</b><span>MAJOR<br>PROJECTS</span></li>
-        <li><b>2</b><span>PUBLISHED<br>PAPERS</span></li>
+        <li><b data-count="3" data-prefix="+">+3</b><span>YEARS OF<br>EXPERIENCE</span></li>
+        <li><b data-count="4" data-prefix="+">+4</b><span>MAJOR<br>PROJECTS</span></li>
+        <li><b data-count="2">2</b><span>PUBLISHED<br>PAPERS</span></li>
       </ul>
       <div class="duo">
         <div class="tile orange">
@@ -76,27 +78,32 @@
       </div>
     </section>
 
+    <div class="marquee" aria-hidden="true"><div class="mtrack">
+      <span>JAVA</span><span>SPRING BOOT</span><span>PYTHON</span><span>REACT</span><span>KUBERNETES</span><span>PYTORCH</span><span>DOCKER</span><span>AZURE</span><span>POSTGRESQL</span><span>LINUX</span>
+      <span>JAVA</span><span>SPRING BOOT</span><span>PYTHON</span><span>REACT</span><span>KUBERNETES</span><span>PYTORCH</span><span>DOCKER</span><span>AZURE</span><span>POSTGRESQL</span><span>LINUX</span>
+    </div></div>
+
     <section id="projects">
       <h2 class="big two"><span>RECENT</span><span class="dim">PROJECTS</span></h2>
       <div class="rows">
         <a class="row proj" data-link-row="diss_code">
           <span class="thumb t1"><svg viewBox="0 0 80 80"><g stroke="#151312" stroke-width="2" stroke-dasharray="3 3"><path d="M40 40L16 18M40 40L64 18M40 40L16 62"/><path d="M40 40L64 62" opacity=".35"/></g><circle cx="40" cy="40" r="9" fill="#151312"/><g fill="#151312"><circle cx="16" cy="18" r="5"/><circle cx="64" cy="18" r="5"/><circle cx="16" cy="62" r="5"/></g><circle cx="64" cy="62" r="5" fill="#151312" opacity=".35"/></svg></span>
-          <span class="rtext"><b>Federated Learning under Packet Loss</b><small>MSc dissertation. FedAvg simulator; compression cut the accuracy gap from 16.4 to 2.3 points. Python, PyTorch, 50 tests.</small></span>
+          <span class="rtext"><b>Federated Learning under Packet Loss</b><small>What happens to AI training when phones drop packets on bad Wi-Fi? I built a simulator to find out. Squeezing updates smaller shrank the gap between strategies from 16.4 to 2.3 points. The twist: halfway through, I audited my own code, found 8 bugs, and published every one.<em>Python · PyTorch · 50 tests · MSc dissertation</em></small></span>
           <span class="go">↗</span>
         </a>
         <a class="row proj" data-link-row="proj1_code">
           <span class="thumb t2"><svg viewBox="0 0 80 80"><rect x="10" y="30" width="22" height="20" rx="4" fill="#151312"/><g fill="none" stroke="#151312" stroke-width="2"><rect x="50" y="12" width="22" height="14" rx="3"/><rect x="50" y="33" width="22" height="14" rx="3"/><rect x="50" y="54" width="22" height="14" rx="3"/><path d="M32 40h8M40 40L50 19M40 40h10M40 40L50 61"/></g></svg></span>
-          <span class="rtext"><b>Cloud-Native Bookstore</b><small>Team of six. React client with Keycloak auth (JWT, token refresh, RBAC) on Spring Boot microservices on Azure AKS.</small></span>
+          <span class="rtext"><b>Cloud-Native Bookstore</b><small>Six engineers, one online bookstore, running on Kubernetes in Azure. I owned the React side and its security: logins that refresh silently and admin pages only admins can reach. Favourite decision: the cart updates instantly and quietly fixes itself if the server disagrees.<em>React · Spring Boot · Keycloak · Azure AKS</em></small></span>
           <span class="go">↗</span>
         </a>
         <a class="row proj" data-link-row="proj2_code">
           <span class="thumb t3"><svg viewBox="0 0 80 80"><g fill="#151312"><rect x="14" y="44" width="10" height="22" rx="2"/><rect x="29" y="30" width="10" height="36" rx="2"/><rect x="44" y="20" width="10" height="46" rx="2"/><rect x="59" y="38" width="10" height="28" rx="2"/></g></svg></span>
-          <span class="rtext"><b>AI Bias Audit Framework</b><small>Measures stereotype bias in generative-AI output with TF-IDF, LDA and entropy scores. Python, scikit-learn.</small></span>
+          <span class="rtext"><b>AI Bias Audit Framework</b><small>"This chatbot is biased" is an opinion. I wanted a number. Same prompts, fixed metrics, comparable scores across models, so the claim can be re-run and checked instead of argued about.<em>Python · scikit-learn · NLP</em></small></span>
           <span class="go">↗</span>
         </a>
         <a class="row proj" data-link-row="proj3_report">
           <span class="thumb t4"><svg viewBox="0 0 80 80"><path d="M40 12l22 8v16c0 15-10 26-22 30-12-4-22-15-22-30V20z" fill="#151312"/><path d="M31 40l7 7 12-14" fill="none" stroke="#fff" stroke-width="3"/></svg></span>
-          <span class="rtext"><b>Tokeneer Security Risk Assessment</b><small>Threat model of a secure-enclave system, scored against NIST impact and likelihood criteria.</small></span>
+          <span class="rtext"><b>Tokeneer Security Risk Assessment</b><small>If a fingerprint-locked vault could be broken, how would it happen, and what should you fix first? A threat model that ranks risks with NIST scoring rather than gut feeling.<em>NIST 800-30 · Threat modelling</em></small></span>
           <span class="go">↗</span>
         </a>
       </div>
@@ -146,6 +153,16 @@
       </div>
     </section>
 
+    <section id="facts">
+      <h2 class="big two"><span>A FEW</span><span class="dim">THINGS ABOUT ME</span></h2>
+      <div class="facts">
+        <div class="fact f1"><b>01</b><p>My favourite bug was one I found in my own dissertation. Reporting it made the results weaker but the work stronger.</p></div>
+        <div class="fact f2"><b>02</b><p>I've explained model accuracy to clients who'd never heard of a test set. If a non-engineer can't follow it, I haven't finished.</p></div>
+        <div class="fact f3"><b>03</b><p>Bharatanatyam taught me that rehearsal beats talent. Same goes for writing tests.</p></div>
+        <div class="fact f4"><b>04</b><p>Currently learning: Kafka, AWS and test-driven development, one small project at a time.</p></div>
+      </div>
+    </section>
+
     <section id="beyond">
       <h2 class="big two"><span>BEYOND</span><span class="dim">THE CODE</span></h2>
       <div class="rows">
@@ -157,6 +174,11 @@
 
     <section id="contact">
       <h2 class="big two"><span>LET'S WORK</span><span class="dim">TOGETHER</span></h2>
+      <div class="term" aria-label="Interactive terminal">
+        <div class="tbar"><i></i><i></i><i></i><span>chaithanya@portfolio ~ try typing <b>help</b></span></div>
+        <div class="tout" id="tout"><p>Welcome! Type <b>help</b> to explore.</p></div>
+        <label class="tin"><span>$</span><input id="tin" autocomplete="off" spellcheck="false" aria-label="Terminal command"></label>
+      </div>
       <form class="form" id="contact-form">
         <div class="frow">
           <label>Name<input name="name" placeholder="Your name" required></label>

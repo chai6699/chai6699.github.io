@@ -125,3 +125,69 @@ const LINKS = {
     location.href = 'mailto:chaithanya6699@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
   });
 })();
+
+// ── lively additions ──
+(function () {
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // rotating phrase
+  var rot = document.getElementById('rot');
+  var words = ['holds up in production', 'survives bad Wi-Fi', 'explains its own decisions', 'is tested before it ships', 'people actually enjoy using'];
+  if (rot && !reduce) {
+    var wi = 0, ci = words[0].length, del = true;
+    setTimeout(function tick() {
+      ci += del ? -1 : 1; rot.textContent = words[wi].slice(0, ci);
+      var wait = del ? 28 : 55;
+      if (del && ci === 0) { del = false; wi = (wi + 1) % words.length; wait = 250; }
+      else if (!del && ci === words[wi].length) { del = true; wait = 2200; }
+      setTimeout(tick, wait);
+    }, 2400);
+  }
+  // count-up stats
+  var nums = document.querySelectorAll('[data-count]');
+  if ('IntersectionObserver' in window && !reduce) {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (!e.isIntersecting) return; io.unobserve(e.target);
+        var el = e.target, end = +el.dataset.count, pre = el.dataset.prefix || '', t0 = null;
+        (function step(t) { t0 = t0 || t; var p = Math.min((t - t0) / 1100, 1);
+          el.textContent = pre + Math.round(end * (1 - Math.pow(1 - p, 3))); if (p < 1) requestAnimationFrame(step); })(performance.now());
+      });
+    }, { threshold: .6 });
+    nums.forEach(function (n) { n.textContent = (n.dataset.prefix || '') + '0'; io.observe(n); });
+  }
+  // tile tilt + spotlight
+  document.querySelectorAll('.tile').forEach(function (t) {
+    var s = document.createElement('i'); s.className = 'spot'; t.appendChild(s);
+    if (reduce) return;
+    t.addEventListener('mousemove', function (e) {
+      var r = t.getBoundingClientRect(), x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height;
+      t.style.setProperty('--mx', x * 100 + '%'); t.style.setProperty('--my', y * 100 + '%');
+      t.style.transform = 'perspective(700px) rotateX(' + ((.5 - y) * 8) + 'deg) rotateY(' + ((x - .5) * 8) + 'deg)';
+    });
+    t.addEventListener('mouseleave', function () { t.style.transform = ''; });
+  });
+  // mini terminal
+  var out = document.getElementById('tout'), inp = document.getElementById('tin');
+  if (!out || !inp) return;
+  var C = {
+    help: 'Commands: <b>about</b>, <b>skills</b>, <b>projects</b>, <b>experience</b>, <b>hire</b>, <b>cv</b>, <b>dance</b>, <b>clear</b>',
+    about: 'Software & ML engineer in Newcastle. 15 months shipping client ML, MSc Advanced CS, allergic to untested code.',
+    skills: 'java  python  sql  c++  spring-boot  react  docker  kubernetes  azure  pytorch  linux  git',
+    projects: '1. federated-learning   (8 bugs found, all published)\n2. cloud-bookstore      (k8s on azure)\n3. ai-bias-audit        (numbers, not opinions)\n4. tokeneer-risk        (NIST threat model)',
+    experience: '2024-25  ML Engineer @ Accurate Info Solution\n2023-24  Full-Stack Intern @ PACE Wisdom\n2022-23  ML Intern @ Accurate Info Solution',
+    hire: 'Great choice. Opening your email app…',
+    cv: 'Downloading CV…',
+    dance: 'Bharatanatyam: 1 stage, 0 merge conflicts. 💃',
+    sudo: 'Nice try. Permission granted only after the interview. 😉'
+  };
+  function print(cmd, res) { out.insertAdjacentHTML('beforeend', '<p><span class="cmd">$ ' + cmd.replace(/</g,'&lt;') + '</span></p><p>' + res + '</p>'); out.scrollTop = out.scrollHeight; }
+  inp.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter') return;
+    var v = inp.value.trim().toLowerCase(); inp.value = ''; if (!v) return;
+    if (v === 'clear') { out.innerHTML = ''; return; }
+    var k = v.split(' ')[0];
+    print(v, C[k] || 'command not found: ' + k.replace(/</g,'&lt;') + ' (try <b>help</b>)');
+    if (k === 'hire') setTimeout(function () { location.href = 'mailto:chaithanya6699@gmail.com?subject=Let%27s%20talk'; }, 600);
+    if (k === 'cv') { var a = document.createElement('a'); a.href = 'Chaithanya_Virupaksha_CV.pdf'; a.download = ''; a.click(); }
+  });
+})();
