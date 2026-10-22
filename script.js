@@ -7,6 +7,7 @@ const LINKS = {
   diss_code:     'https://github.com/chai6699/federated-learning-packet-loss',
   proj1_code:    '',   // Bookstore platform repository
   proj1_writeup: '',   // Bookstore architecture write-up (repo README, PDF, blog post)
+  sysdash_code:  'https://github.com/chai6699/sysdash',
   proj2_code:    '',   // AI bias audit repository
   proj3_report:  '',   // Tokeneer assessment (PDF in this folder is fine, e.g. 'tokeneer.pdf')
 
@@ -35,7 +36,7 @@ const LINKS = {
   // theme
   var tb = $('#themebtn'), root = document.documentElement;
   if (tb) tb.addEventListener('click', function () {
-    var t = root.dataset.theme === 'light' ? 'dark' : 'light';
+    var t = root.dataset.theme === 'dark' ? 'light' : 'dark';
     root.dataset.theme = t; try { localStorage.setItem('theme', t); } catch (e) {}
   });
 
@@ -108,8 +109,8 @@ const LINKS = {
   var C = {
     help: 'try: <b>about</b> <b>skills</b> <b>projects</b> <b>experience</b> <b>hire</b> <b>cv</b> <b>dance</b> <b>clear</b>',
     about: 'Software & ML engineer in Newcastle. 15 months shipping client ML, MSc Advanced CS, allergic to untested code.',
-    skills: 'java  spring-boot  python  react  sql  c++  docker  kubernetes  azure  pytorch  linux  git',
-    projects: '1. federated-learning   8 bugs found, all published\n2. cloud-bookstore      k8s on azure\n3. ai-bias-audit        numbers, not opinions\n4. tokeneer-risk        NIST threat model',
+    skills: 'python  java  spring-boot  react  electron  sql  docker  kubernetes  azure  grafana  pytorch  git',
+    projects: '1. federated-learning   8 bugs found, all published\n2. cloud-bookstore      k8s on azure\n3. ai-bias-audit        numbers, not opinions\n4. sysdash              secure electron monitor\n5. tokeneer-risk        NIST threat model',
     experience: '2024-25  ML Engineer @ Accurate Info Solution\n2023-24  Full-Stack Intern @ PACE Wisdom\n2022-23  ML Intern @ Accurate Info Solution',
     hire: 'Great choice. Opening your email app…',
     cv: 'Downloading CV…',
