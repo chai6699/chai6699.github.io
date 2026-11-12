@@ -108,9 +108,9 @@ const LINKS = {
   if (!out || !inp) return;
   var C = {
     help: 'try: <b>about</b> <b>skills</b> <b>projects</b> <b>experience</b> <b>hire</b> <b>cv</b> <b>dance</b> <b>clear</b>',
-    about: 'Software & ML engineer in Newcastle. 15 months shipping client ML, MSc Advanced CS, allergic to untested code.',
-    skills: 'python  java  spring-boot  react  electron  sql  docker  kubernetes  azure  grafana  pytorch  git',
-    projects: '1. federated-learning   8 bugs found, all published\n2. cloud-bookstore      k8s on azure\n3. ai-bias-audit        numbers, not opinions\n4. sysdash              secure electron monitor\n5. tokeneer-risk        NIST threat model',
+    about: 'Software & ML engineer in Newcastle. 15 months building ML for clients, MSc Advanced CS (Distinction in dissertation), allergic to untested code.',
+    skills: 'python  java  spring-boot  quarkus  react  sql  docker  kubernetes  azure  prometheus  grafana  pytorch  bash  git',
+    projects: '1. federated-learning   8 bugs found, all published\n2. cloud-bookstore      k8s on azure\n3. ai-bias-audit        comparing two text-bias pipelines\n4. sysdash              secure electron monitor\n5. tokeneer-risk        NIST threat model\n6. k8s-load-test        found where it breaks\n7. travel-booking       undo on failure, 3 services',
     experience: '2024-25  ML Engineer @ Accurate Info Solution\n2023-24  Full-Stack Intern @ PACE Wisdom\n2022-23  ML Intern @ Accurate Info Solution',
     hire: 'Great choice. Opening your email app…',
     cv: 'Downloading CV…',

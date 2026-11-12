@@ -1,6 +1,6 @@
 ## Chaithanya Virupaksha
 
-MSc Advanced Computer Science at Newcastle University (award December 2026).
+MSc Advanced Computer Science at Newcastle University (Merit, Distinction in dissertation).
 Previously 15 months full-time in Bengaluru delivering machine-learning projects for
 clients, from requirements to handover, after part-time ML and full-stack internships.
 
@@ -9,7 +9,7 @@ work under conditions the happy path doesn't cover.
 
 **Currently**
 - Looking for machine learning, applied AI and forward deployed engineering roles in the UK
-- UK Graduate Route from December 2026, so no sponsorship needed to start
+- UK Graduate visa (applied November 2026), so no sponsorship needed to start
 - Working towards AWS Solutions Architect Associate
 
 **Working with**
